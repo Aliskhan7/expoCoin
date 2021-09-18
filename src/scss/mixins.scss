@@ -1,0 +1,28 @@
+@mixin gotham-bold {
+    font-family: "Gotham Pro", sans-serif;
+
+    font-weight: bold;
+}
+
+@mixin gotham-normal {
+    font-family: "Gotham Pro", sans-serif;
+
+    font-weight: normal;
+}
+
+@mixin montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: bold;
+}
+@mixin montserrat-semi-bold {
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 600;
+}
+
+@mixin montserrat-normal {
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 100;
+}

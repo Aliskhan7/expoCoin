@@ -1,0 +1,55 @@
+@import '../mixins.scss';
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+   
+
+    & .overflow {
+        background-color: rgba(0, 0, 0, 0.329);
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+   
+
+    &-dialog {
+        max-width: 500px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 70px 30px 70px 30px;
+        position: relative;
+
+        & h2 {
+            @include montserrat-bold;
+            margin-bottom: 20px;
+        }
+
+        & p {
+            @include montserrat-normal 
+        }
+
+
+        & button {
+            position: absolute;
+            background: none;
+            outline: none;
+            font-size: 30px;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+    }
+}
