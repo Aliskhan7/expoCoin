@@ -115,7 +115,7 @@ const AboutCompany = ({ locale }) => {
 									alt={item.texts[locale]}
 									className="aboutCompany-list__img imgBenefits"
 								/>
-								<div className="aboutCompany-list__text">
+								<div className="aboutCompany-list__text benefitsCompany-list__text">
 									<span className="aboutCompany-list__title">
 										{item.texts[locale].title}
 									</span> <br/>

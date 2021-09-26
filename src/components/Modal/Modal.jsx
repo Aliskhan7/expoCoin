@@ -6,9 +6,7 @@ const Modal = ({ isOpen, onClose, emailData }) => {
 			<div className="overflow" onClick={() => onClose(false)}>
 				<div className="modal-dialog">
 					<button onClick={() => onClose(false)}>&times;</button>
-
-					<h2>{emailData.message}</h2>
-					<p>We will call you back later.</p>
+					<p>Мы Вам перезвоним в ближайшее время</p>
 				</div>
 			</div>
 		</div>

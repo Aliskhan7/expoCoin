@@ -4,11 +4,12 @@ import App from './App'
 
 import './scss/main.scss'
 import 'slick-carousel/slick/slick.css'
+import { BrowserRouter as  Router } from 'react-router-dom'
 // import 'slick-carousel/slick/slick-theme.css'
 
 ReactDOM.render(
-	<React.StrictMode>
+	<Router>
 		<App />
-	</React.StrictMode>,
+	</Router>,
 	document.getElementById('root'),
 )

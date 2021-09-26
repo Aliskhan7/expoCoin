@@ -10,12 +10,13 @@
         @include gotham-bold;
         color: $text-white;
         font-size: 36px;
-
+    }
+    &__item{
+        margin-bottom: 30px;
     }
     a{
         color: $text-white;
     }
-
     @media (max-width: 1200px) {
         &__title {
            font-size: 24px;
@@ -148,7 +149,9 @@
         }
     }
 }
-
+#mes{
+    display: none;
+}
 .form {
 
     transition: all .3s;
@@ -188,6 +191,10 @@
 
 
         &__input {
+            @media (max-width: 550px) {
+                margin-right: 0;
+            }
+
             border: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.24);
             background: transparent;
@@ -223,6 +230,7 @@
             font-size: 18px;
             line-height: 28px;
             color: rgba(255, 255, 255, 0.24);
+            margin-right: 30px;
         }
 
         &__btn {

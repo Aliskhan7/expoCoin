@@ -4,14 +4,14 @@ import { IntlProvider, FormattedMessage } from 'react-intl'
 
 const messages = {
 	en: {
-		text: 'Before the launch on the exchange, there are:',
+		text: 'Start of ICO:',
 		day: 'days',
 		hours: 'hours',
 		minutes: 'minutes',
 		seconds: 'seconds'
 	},
 	ru: {
-		text: 'До запуска на биржу осталось:',
+		text: 'До запуска ICO:',
 		day: 'день',
 		hours: 'час',
 		minutes: 'минут',
@@ -28,10 +28,10 @@ const Timer = ({ locale }) => {
 	const getTimeRemainig = (deadline) => {
 		const t = Date.parse(deadline) - Date.parse(new Date())
 
-		const days = Math.floor(t / (1000 * 60 * 60 * 24))
-		const hours = Math.floor((t / (1000 * 60 * 60)) % 60)
-		const minutes = Math.floor((t / 1000 / 60) % 60)
-		const seconds = Math.floor((t / 1000) % 60)
+		const days =  Math.floor(t/1000/60/60/24);
+		const hours = Math.floor((t/1000/60/60)%24);
+		const minutes = Math.floor((t/1000/60)%60);
+		const seconds = Math.floor((t/1000)%60);
 
 		return {
 			t,

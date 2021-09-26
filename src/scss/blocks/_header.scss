@@ -15,6 +15,21 @@
         padding: 0 0 120px 0;
     }
 
+    .downloadFile{
+        @include montserrat-normal;
+        border: 1px solid #F2F2F2;
+        box-sizing: border-box;
+        border-radius: 60px;
+        padding: 15px 35px;
+        color: #F2F2F2;
+        display: inline-block;
+        margin-top: 30px;
+    }
+    .downloadFile:hover{
+        background: #f2f2f2;
+        color: #0d0d2e;
+        transition: .3s;
+    }
     &-nav {
         display: flex;
         align-items: center;

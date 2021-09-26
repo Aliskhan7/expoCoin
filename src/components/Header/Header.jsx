@@ -1,13 +1,15 @@
 import React from 'react'
-
 import Circles from '../../assets/img/circles.svg'
 import Eye from '../../assets/img/eye.svg'
 import Laptop from '../../assets/img/laptop.png'
 import Elipses from '../../assets/img/elipses.svg'
 import Nav from './Nav'
 import Timer from './Timer'
-
 import { IntlProvider, FormattedMessage } from 'react-intl'
+import * as PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import loadPdfRu from './pdfFile/Whitepaper RUS.pdf'
+import loadPdfEn from './pdfFile/Whitepaper ENG.pdf'
 
 const messages = {
 	en: {
@@ -21,12 +23,20 @@ const messages = {
 	},
 }
 
+Link.propTypes = {
+	to: PropTypes.string,
+	onClick: PropTypes.func,
+	children: PropTypes.node
+}
+
 const Header = ({ locale, setLocale }) => {
+
+
+
 	return (
 		<header className="header">
 			<div className="container">
 				<Nav setLocale={setLocale} locale={locale} />
-
 				<div className="header-intro">
 					<div className="header-intro__info">
 						<IntlProvider
@@ -72,8 +82,13 @@ const Header = ({ locale, setLocale }) => {
 						className="header-intro__img"
 					/>
 				</div>
+				{locale === 'ru' ? <a className='downloadFile' href={loadPdfRu} type="application/pdf; download='pdf'" rel="noopener noreferrer" download>Скачать Whitepaper</a> :
+					<a className='downloadFile' href={loadPdfEn} type="application/pdf; download='pdf'" rel="noopener noreferrer" download>Download Whitepaper</a>
+				}
+
 			</div>
 			<img src={Elipses} alt="" className="achievements__circles" />
+
 		</header>
 	)
 }
